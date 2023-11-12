@@ -1,0 +1,31 @@
+<input id="bgColorBlue" type="radio" name="bgColor" (click)="changeListBg('blue')">
+<label class="terminal" for="bgColorBlue">Blue</label>
+
+<input id="bgColorRed" type="radio" name="bgColor" (click)="changeListBg('red')">
+<label class="terminal" for="bgColorRed">Red</label>
+
+<input id="bgColorGreen" type="radio" name="bgColor" (click)="changeListBg('green')">
+<label class="terminal" for="bgColorGreen">Green</label>
+
+<input id="bgColorGold" type="radio" name="bgColor" (click)="changeListBg('gold')">
+<label class="terminal" for="bgColorGold">Gold</label>
+
+<input id="bgColorBlack" type="radio" name="bgColor" (click)="changeListBg('black')">
+<label class="terminal" for="bgColorBlack">Black</label>
+
+<div class="list" [style.background-color]="listBg">
+  <div>
+    <ul>
+      <li class="terminal" *ngFor="let str of stringArr" (click)="showText(str)">{{str}}</li>
+    </ul>
+  </div>
+  <ng-container *ngIf="isShow">
+    <div *ngTemplateOutlet="showStringTmp"></div>
+  </ng-container>
+</div>
+
+<ng-template #showStringTmp>
+  <div>
+    <p class="terminal">{{showString}} <a (click)="isShow = false"> [ X ] </a></p>
+  </div>
+</ng-template>

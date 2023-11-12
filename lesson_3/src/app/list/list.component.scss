@@ -1,0 +1,40 @@
+$margin-value: 8px;
+
+.terminal {
+  color: white;
+  font: {
+    size: 18px;
+
+  };
+  margin: {
+    bottom: $margin-value;
+  };
+  a {
+    color: red;
+  }
+}
+
+p.terminal {
+  @extend .terminal;
+  font: {
+    size: 24px;
+  };
+  margin: {
+    top: $margin-value;
+  };
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+
+  > div {
+    margin: $margin-value;
+    width: calc(50% - ($margin-value * 2));
+  }
+}
