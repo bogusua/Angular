@@ -1,0 +1,8 @@
+<img [ngSrc]="images[counter]" alt="{{counter}}" height="570" width="570" (keydown.arrowRight)="slide('next')">
+<hr>
+<div class="slideControl" >
+  <button (click)="slide('back')"> <<< </button>
+  <span>Slide: {{counter}}</span>
+  <button (click)="slide('next')"> >>> </button>
+</div>
+
