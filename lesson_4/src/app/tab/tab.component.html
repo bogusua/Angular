@@ -10,6 +10,7 @@
 <div class="tab-content">
   <ng-container *ngFor="let tab of tabs">
     <ng-container *ngIf="isActive === tab.name">
+      <h1>{{tab.name}}</h1>
       <ng-template [ngComponentOutlet]="tab.component"></ng-template>
     </ng-container>
   </ng-container>
