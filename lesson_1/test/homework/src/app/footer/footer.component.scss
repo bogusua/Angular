@@ -1,0 +1,13 @@
+footer {
+  padding: 8px;
+  display: flex;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  justify-content: normal;
+  align-items: center;
+  font: {
+    weight: bold;
+    size: 18px;
+  }
+}
