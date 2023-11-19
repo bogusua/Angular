@@ -10,9 +10,11 @@ import {SchoolComponent} from "./school/school.component";
 import {BabyFoodComponent} from "./baby-food/baby-food.component";
 import {ChildrenClothingComponent} from "./children-clothing/children-clothing.component";
 import {MenClothingComponent} from "./men-clothing/men-clothing.component";
+import {ToysComponent} from "./toys/toys.component";
+import {WomenClothingComponent} from "./women-clothing/women-clothing.component";
 
 const routes: Routes = [
-  { path: 'women-clothing', redirectTo: 'women-clothing/dresses' },
+  { path: 'women-clothing', component: WomenClothingComponent },
   { path: 'women-clothing/dresses', component: DressesComponent },
   { path: 'women-clothing/jackets', component: JacketsComponent },
 
@@ -24,7 +26,7 @@ const routes: Routes = [
   { path: 'children-clothing/t-shirts', component: TShirtsComponent },
   { path: 'children-clothing/pajamas', component: PajamasComponent },
 
-  { path: 'toys', redirectTo: 'toys/dolls' },
+  { path: 'toys', component: ToysComponent },
   { path: 'toys/dolls', component: DollsComponent },
   { path: 'toys/cars', component: CarsComponent },
 

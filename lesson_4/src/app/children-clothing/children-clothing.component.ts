@@ -11,7 +11,6 @@ export class ChildrenClothingComponent {
 
   constructor(private moduleRef: NgModuleRef<any>) {
     console.log('Loaded Modules: ', this.moduleRef.injector.get(NgModuleRef));
-
   }
 
   protected readonly PajamasComponent = PajamasComponent;
