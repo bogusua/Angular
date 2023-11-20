@@ -1,0 +1,29 @@
+.tabs {
+  display: flex;
+}
+.tab {
+  cursor: pointer;
+  border: 3px solid gray;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.active {
+  background-color: lightgray;
+  color: black;
+}
+
+.tab-content {
+  border: {
+    width: 3px;
+    style: solid;
+    color: gray;
+  }
+  padding: 20px;
+}
+
+h1 {
+  border: 3px solid gray;
+  padding: 10px;
+}
+

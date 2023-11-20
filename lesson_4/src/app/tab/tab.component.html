@@ -1,0 +1,17 @@
+<div class="tabs">
+  <div *ngFor="let tab of tabs"
+       (click)="showTab(tab.name)"
+       [class.active]="isActive === tab.name"
+       class="tab"
+  >
+    {{ tab.name }}
+  </div>
+</div>
+<div class="tab-content">
+  <ng-container *ngFor="let tab of tabs">
+    <ng-container *ngIf="isActive === tab.name">
+      <h1>{{tab.name}}</h1>
+      <ng-template [ngComponentOutlet]="tab.component"></ng-template>
+    </ng-container>
+  </ng-container>
+</div>
