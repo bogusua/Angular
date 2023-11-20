@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {SchoolModule} from "./school/school.module";
-import {BabyFoodModule} from "./baby-food/baby-food.module";
-import {ChildrenClothingModule} from "./children-clothing/children-clothing.module";
-import {MenClothingModule} from "./men-clothing/men-clothing.module";
-import {WomenClothingModule} from "./women-clothing/women-clothing.module";
-import {ToysModule} from "./toys/toys.module";
+import {
+  BabyFoodModule,
+  ChildrenClothingModule,
+  MenClothingModule,
+  SchoolModule,
+  ToysModule,
+  WomenClothingModule
+} from "./index";
 
 @NgModule({
   declarations: [
@@ -17,12 +19,12 @@ import {ToysModule} from "./toys/toys.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SchoolModule,
     BabyFoodModule,
     ChildrenClothingModule,
     MenClothingModule,
-    WomenClothingModule,
-    ToysModule
+    SchoolModule,
+    ToysModule,
+    WomenClothingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

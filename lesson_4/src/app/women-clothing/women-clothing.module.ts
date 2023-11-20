@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DressesComponent } from './dresses/dresses.component';
-import { JacketsComponent } from './jackets/jackets.component';
-import { WomenClothingComponent } from './women-clothing.component';
+import { DressesComponent, JacketsComponent, WomenClothingComponent } from './index';
 import {TabModule} from "../tab/tab.module";
 
 

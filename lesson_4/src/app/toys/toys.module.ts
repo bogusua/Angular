@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DollsComponent } from './dolls/dolls.component';
-import { CarsComponent } from './cars/cars.component';
-import { ToysComponent } from './toys.component';
+import { DollsComponent, CarsComponent, ToysComponent } from './index';
 import {TabModule} from "../tab/tab.module";
 
 
