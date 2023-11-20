@@ -1,0 +1,11 @@
+<ol>
+  <li>Pipe "date": {{demoData.currentDate | date: 'yyyy-MM-dd HH:mm:ss'}}</li>
+  <li>Pipe "uppercase": {{demoData.text | uppercase}}</li>
+  <li>Pipe "lowercase": {{demoData.text | lowercase}}</li>
+  <li>Pipe "number": {{demoData.numberValue | number: '1.2-2'}}</li>
+  <li>Pipe "percent": {{demoData.percentValue | percent}}</li>
+  <li>Pipe "percent": {{demoData.percentValue | percent: '1.2-2'}}</li>
+  <li>Pipe "price": {{demoData.price | currency: 'UAH: '}}</li>
+  <li>Pipe "JSON": {{demoData.object | json}}</li>
+  <li>Pipe "Array slice": {{demoData.array | slice: 1 : 4}}</li>
+</ol>
