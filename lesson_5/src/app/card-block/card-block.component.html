@@ -1,5 +1,5 @@
 <div>
   <p class="name">{{ name }}</p>
-  <p class="price">{{ price }} грн</p>
+  <p class="price">{{ displayPrice | currency: "₴ " }}</p>
   <button (click)="showDetails(productId)"> Ознайомитися </button>
 </div>

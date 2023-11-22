@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, QueryList, ViewChildren} from '@angular/core';
+import {CardBlockComponent} from "../card-block/card-block.component";
 
 @Component({
   selector: 'app-cards-container',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CardsContainerComponent {
 
+  isDiscount: boolean = false
+  discountBtnText: string = "Хочу знижку"
   desc: string = "";
   products = [
     {"id": 1, "name": "Ноутбук HP Pavilion 15", "price": 24999, "description": "HP Pavilion 15 - потужний ноутбук з великим екраном."},
@@ -31,9 +34,20 @@ export class CardsContainerComponent {
     {"id": 20, "name": "Кавоварка Saeco Incanto", "price": 29999, "description": "Saeco Incanto - автоматична кавоварка з можливістю приготування капучіно."}
   ];
 
+  @ViewChildren(CardBlockComponent) cardBlocks!: QueryList<CardBlockComponent>;
   handleShowDetails(id: number) {
-    this.desc = this.products.filter((product) => product.id === id)[0].description
+    const selectedProduct = this.products.find((product) => product.id === id);
+    this.desc = selectedProduct ? selectedProduct.description : '';
+  }
 
+  applyDiscount() {
+    this.isDiscount = !this.isDiscount;
+    this.discountBtnText = (this.isDiscount) ? "Нехочу знижку" : this.discountBtnText;
+    this.cardBlocks.forEach((card: CardBlockComponent) => {
+      card.displayPrice = (this.isDiscount) ? card.price - (card.price * (100 - 15)/100 ): card.price;
+
+      console.log(card);
+    })
   }
 
 
