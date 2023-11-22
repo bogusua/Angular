@@ -1,0 +1,18 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  border: {
+    style: solid;
+    width: 1px;
+    color: blue;
+  };
+  padding: 4px;
+  margin: 4px;
+  height: 32px;
+}

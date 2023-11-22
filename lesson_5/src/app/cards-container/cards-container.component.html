@@ -1,0 +1,14 @@
+<div class="product" *ngIf="desc">
+  {{ desc }}</div>
+<section>
+  <ng-container *ngFor="let product of products">
+    <app-card-block
+      [name]="product.name"
+      [price]="product.price"
+      [productId]="product.id"
+      (moreDetailsEvent)="handleShowDetails($event)"
+    ></app-card-block>
+  </ng-container>
+</section>
+
+
