@@ -8,17 +8,19 @@ div {
   padding: 4px;
   margin: 4px;
   &:hover {
-    background-color: lightgrey;
+    border: {
+      width: 2px;
+    };
+    margin: 3px;
   }
   p.name {
     font: {
       weight: bold;
     };
-    color: green;
     height: 35px;
   }
   p.price {
-    color: red;
+    font-weight: bold;
     text-align: right;
     vertical-align: top;
   }

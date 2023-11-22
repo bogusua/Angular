@@ -1,5 +1,6 @@
-<div>
+<div #productBlock>
   <p class="name">{{ name }}</p>
+  <ng-content></ng-content>
   <p class="price">{{ displayPrice | currency: "₴ " }}</p>
-  <button (click)="showDetails(productId)"> Ознайомитися </button>
+  <button (click)="showDetails(id)"> Ознайомитися </button>
 </div>

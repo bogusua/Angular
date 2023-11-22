@@ -7,9 +7,11 @@
     <app-card-block
       [name]="product.name"
       [price]="product.price"
-      [productId]="product.id"
+      [id]="product.id"
       (moreDetailsEvent)="handleShowDetails($event)"
-    ></app-card-block>
+    >
+      <b> {{ product.color }}</b>
+    </app-card-block>
   </ng-container>
 </section>
 
