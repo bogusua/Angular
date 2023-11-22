@@ -7,6 +7,6 @@ import {Component, Input} from '@angular/core';
 })
 export class ListItemInputComponent {
 
-  @Input() input: string = '';
+  @Input() input: string[] = [];
 
 }

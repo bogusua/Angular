@@ -1,10 +1,8 @@
 <pre>Through ng-content</pre>
-<ul *ngFor="let item of stringsArray">
-  {{ item }}
+<ul>
+  <li  *ngFor="let item of stringsArray">{{ item }}</li>
 </ul>
 <hr>
 <pre>Through @Input</pre>
-<ul *ngFor="let item of stringsArray">
-  <app-list-item-input [input]="item"></app-list-item-input>
-</ul>
+<app-list-item-input [input]="stringsArray"></app-list-item-input>
 <hr>
