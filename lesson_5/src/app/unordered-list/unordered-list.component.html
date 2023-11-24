@@ -1,0 +1,8 @@
+<pre>Through ng-content</pre>
+<ul>
+  <li  *ngFor="let item of stringsArray">{{ item }}</li>
+</ul>
+<hr>
+<pre>Through @Input</pre>
+<app-list-item-input [input]="stringsArray"></app-list-item-input>
+<hr>

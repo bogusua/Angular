@@ -1,0 +1,18 @@
+<button (click)="applyDiscount()">{{ discountBtnText }}</button>
+
+<div class="product" *ngIf="desc">
+  {{ desc }}</div>
+<section>
+  <ng-container *ngFor="let product of products">
+    <app-card-block
+      [name]="product.name"
+      [price]="product.price"
+      [id]="product.id"
+      (moreDetailsEvent)="handleShowDetails($event)"
+    >
+      <b> {{ product.color }}</b>
+    </app-card-block>
+  </ng-container>
+</section>
+
+
