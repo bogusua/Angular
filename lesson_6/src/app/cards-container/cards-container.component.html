@@ -1,0 +1,30 @@
+<div class="product">
+  <div>
+    Search: <input [(ngModel)]="search" (keyup)="searchByName(search)">
+  </div>
+
+</div>
+<div class="product">
+  <button (click)="applyDiscount()">{{ discountBtnText }}</button>
+  <button (click)="sortByPrice(false)">{{ sortASCPriceBtnText }}</button>
+  <button (click)="sortByPrice(true)">{{ sortDESCPriceBtnText }}</button>
+</div>
+
+<div class="product" *ngIf="desc">
+  {{ desc }}</div>
+<section *ngIf="!isSearchErr">
+  <ng-container *ngFor="let product of products">
+    <app-card-block
+      [name]="product.name"
+      [price]="product.price"
+      [id]="product.id"
+      (moreDetailsEvent)="handleShowDetails($event)"
+    >
+      <b> {{ product.color }}</b>
+    </app-card-block>
+  </ng-container>
+</section>
+<section *ngIf="isSearchErr" class="err">
+  {{ noSearchResultTxt }}
+</section>
+

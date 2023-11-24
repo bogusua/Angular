@@ -1,0 +1,28 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: {
+    style: solid;
+    width: 1px;
+    color: #fff;
+  };
+  color: #fff;
+  padding: 4px;
+  margin: 4px;
+  height: 32px;
+}
+
+.err {
+  color: red;
+  font: {
+    size: 24px;
+    weight: bold;
+  }
+}
