@@ -9,11 +9,13 @@ import {HttpClientModule} from "@angular/common/http";
 import {FakeExercisesService} from "./services/fake-exercises.service";
 import {ExercisesService} from "./services/exercises.service";
 import {FitnessModule} from "./components/fitness/fitness.module";
+import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlbumsComponent,
+    CounterComponent,
     // FitnessComponent
   ],
   imports: [
