@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>UserId</th>
+  </tr>
+  <tr *ngFor="let album of responseData">
+    <td>{{ album.id}}</td>
+    <td>{{ album.title}}</td>
+    <td>{{ album.userId}}</td>
+  </tr>
+</table>
