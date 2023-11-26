@@ -14,8 +14,7 @@ export class AlbumsComponent {
 
   constructor(private albumService: AlbumsService) {
     const data = this.albumService.getAlbums()
-      data.subscribe(
-        {
+      data.subscribe({
           next: (data) => {
             this.albumsData = data;
             console.dir(this.albumsData);
@@ -26,11 +25,9 @@ export class AlbumsComponent {
           complete: () => {
             console.log('Success get data')
           }
-        }
-    )
+        });
 
-    this.albumService.getAlbumsPipe(data).subscribe(
-      {
+    this.albumService.getAlbumsPipe(data).subscribe({
         next: (data) => {
           this.albumsPipeData = data;
           console.dir(this.albumsPipeData);
@@ -41,9 +38,7 @@ export class AlbumsComponent {
         complete: () => {
           console.log("Success MAP data to new Album()")
         }
-      }
-    )
-
+      });
   }
 
 }

@@ -6,18 +6,23 @@ import { AppComponent } from './app.component';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { AlbumsService } from "./services/albums.service";
 import {HttpClientModule} from "@angular/common/http";
+import {FakeExercisesService} from "./services/fake-exercises.service";
+import {ExercisesService} from "./services/exercises.service";
+import {FitnessModule} from "./components/fitness/fitness.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    // FitnessComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FitnessModule
   ],
-  providers: [AlbumsService],
+  providers: [AlbumsService, ExercisesService, FakeExercisesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
