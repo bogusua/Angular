@@ -3,21 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AlbumComponent } from './components/album/album.component';
-import { AlbumService } from "./services/album.service";
+import { AlbumsComponent } from './components/albums/albums.component';
+import { AlbumsService } from "./services/albums.service";
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumComponent
+    AlbumsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AlbumService],
+  providers: [AlbumsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
