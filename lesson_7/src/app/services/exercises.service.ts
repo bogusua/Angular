@@ -23,7 +23,7 @@ export class ExercisesService {
     return this.http.put(this.baseUrl, body);
   }
 
-  delExercises(body: {id: number, name: string}): Observable<any> {
+  delExercises(): Observable<any> {
     return this.http.delete(this.baseUrl);
   }
 }

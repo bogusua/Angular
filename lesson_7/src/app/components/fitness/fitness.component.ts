@@ -58,11 +58,8 @@ export class FitnessComponent {
     });
   }
   delExercises() {
-    const rndId = Math.floor(Math.random() * this.exerciseList.length) + 1;
-    const reqBody = {id: rndId, name: 'Exercise ' + rndId + ' UPDATED'}
-
-    this.exercisesService.delExercises(reqBody).subscribe({
-      next: (data) => {
+    this.exercisesService.delExercises().subscribe({
+      next: () => {
         this.exerciseDelBody = (this.exerciseList.length) ? 'Deleted' : '';
         console.log('DELETE', this.exerciseDelBody)
       }
