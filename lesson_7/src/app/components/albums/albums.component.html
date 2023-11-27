@@ -1,0 +1,35 @@
+<div>
+  <table>
+    <tr>
+      <th colspan="3">
+        Request Data
+      </th>
+    </tr>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>UserId</th>
+    </tr>
+    <tr *ngFor="let album of albumsData">
+      <td>{{ album.id}}</td>
+      <td>{{ album.title}}</td>
+      <td>{{ album.userId}}</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <th colspan="2">
+        Request Data + Pipe Album
+      </th>
+    </tr>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+    </tr>
+    <tr *ngFor="let album of albumsPipeData">
+      <td>{{ album.id}}</td>
+      <td>{{ album.title}}</td>
+    </tr>
+  </table>
+</div>

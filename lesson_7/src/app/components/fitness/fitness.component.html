@@ -1,0 +1,18 @@
+<h3>Intercepted GET request on Init</h3>
+{{ exerciseList | json }}
+
+<h3>Intercepted POST request</h3>
+<button (click)="postExercises()">POST + 1</button>
+ POST body: {{ this.exercisePostBody | json }}
+
+<h3>Intercepted PUT request</h3>
+<button (click)="putExercises()">PUT random</button>
+ PUT body: {{ this.exercisePutBody | json }}
+
+<h3>Intercepted DELETE request</h3>
+<button (click)="delExercises()">DELETE all</button>
+{{ this.exerciseDelBody  }}
+
+
+<h3>Intercepted GET request</h3>
+<button (click)="getExercises()">GET</button>

@@ -1,0 +1,6 @@
+<div>
+  <button (click)="startCounter()" [disabled]="isRunning">Запуск</button>
+  <button (click)="stopCounter()" [disabled]="!isRunning">Стоп</button>
+  <button (click)="resetCounter()">Скинути</button>
+  <h1>Лічильник: {{ counter }}</h1>
+</div>
